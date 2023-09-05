@@ -123,11 +123,12 @@ const Whiteboard = ({canvasRef,ctxRef,elements,setElements,tool,color,setColor,u
         if(tool==="pencil"){
         setElements(prevElements=>[
             ...prevElements,
+
             {type:"pencil",
             offsetX,
             offsetY,
             path:[[offsetX,offsetY]],
-            stroke:{color}
+            color
         }])   
         }
         else if(tool==="line"){
@@ -138,7 +139,7 @@ const Whiteboard = ({canvasRef,ctxRef,elements,setElements,tool,color,setColor,u
                 offsetY,
                 height:offsetY,
                 width:offsetX,
-                stroke:{color}
+                color
             }])   
 
         }
@@ -150,7 +151,7 @@ const Whiteboard = ({canvasRef,ctxRef,elements,setElements,tool,color,setColor,u
                 offsetY,
                 height:0,
                 width:0,
-                stroke:{color}
+                color
             }])   
 
         }
@@ -177,7 +178,7 @@ const Whiteboard = ({canvasRef,ctxRef,elements,setElements,tool,color,setColor,u
                 prevElements.map((ele,index)=>{
                     if (index===elements.length-1){
                         return {...ele,
-                        path:newPath
+                        path:newPath,
                     };
                 }else{
                     return ele;
