@@ -13,7 +13,7 @@ useEffect(()=>{
         return () => socket.off("messageResponse")
     })
 
-},[chat,socket])
+},[]) // Register the event only once
 
 function handleSubmit(e){
     e.preventDefault()
