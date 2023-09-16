@@ -12,8 +12,8 @@ Whiteboard Sharing app made using React JS
 - No. of people online is displayed
 - Toast messages displayed when a room is joined,left or code is copied
 
-  # Tech Stack
-  - React JS
-  - Node JS
-  - Socket.io
-  - Tailwind CSS
+# Tech Stack
+- React JS
+- Node JS
+- Socket.io
+- Tailwind CSS
